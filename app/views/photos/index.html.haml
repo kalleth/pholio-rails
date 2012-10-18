@@ -4,4 +4,6 @@
       = link_to photo_path(photo) do
         %img{src: photo.image.thumb}
         .caption
-          %p= photo.title
+          %h2= photo.title
+          %hr
+          %p= photo.description

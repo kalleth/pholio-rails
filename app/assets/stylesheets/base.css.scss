@@ -14,9 +14,19 @@ body {
           display: none;
           top: 10px;
           left: 10px;
-          p {
+          h2 {
+            font-size: 16px;
             color: #222;
             font-weight: bold;
+            line-height: normal;
+            margin: 0px;
+            padding: 0px;
+            margin-bottom: 4px;
+          }
+          hr { border: 0px; height: 1px; background-color: #666; width: 250px; margin: 0 auto; }
+          p {
+            margin-top: 4px;
+            color: #444;
           }
         }
       }
