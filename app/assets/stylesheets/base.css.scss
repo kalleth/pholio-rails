@@ -1,6 +1,11 @@
+@import 'bourbon';
 body {
   padding-top: 60px;
   #content {
     padding: 20px 0px;
+    .photo {
+      @include inline-block;
+      margin: 10px;
+    }
   }
 }
