@@ -3,6 +3,35 @@ body {
   padding-top: 60px;
   #content {
     padding: 20px 0px;
+    .photo-detail {
+      .photo {
+        img { max-width: 600px; }
+      }
+      p {
+        color: #222;
+      }
+      p.extra {
+        font-style: italic;
+        color: #444;
+      }
+      .exif {
+        color: #555;
+        h2 { 
+          font-size: 18px;
+          color: #444; 
+        } 
+        table {
+          tr td {
+            color: #666;
+            vertical-align: top;
+            &:first-child {
+              width: 130px;
+              color: #aaa;
+            }
+          }
+        }
+      }
+    }
     .photo-thumbs {
       a { text-decoration: none; }
       .photo {
@@ -23,7 +52,7 @@ body {
             padding: 0px;
             margin-bottom: 4px;
           }
-          hr { border: 0px; height: 1px; background-color: #666; width: 250px; margin: 0 auto; }
+          hr { border: 0px; height: 3px; background-color: #666; width: 250px; margin: 0 auto; }
           p {
             margin-top: 4px;
             color: #444;

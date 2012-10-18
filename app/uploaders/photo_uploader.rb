@@ -24,6 +24,20 @@ class PhotoUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [280,210]
   end
 
+  def get_exif
+    manipulate! do |img|
+      return {
+        :date_taken => img['EXIF:DateTimeOriginal'],
+        :make => img['EXIF:Make'],
+        :model => img['EXIF:Model'],
+        :shutter_speed => img['EXIF:ExposureTime'],
+        :aperture => img['EXIF:FNumber'],
+        :focal_length => img['EXIF:FocalLength'],
+        :iso => img['EXIF:ISOSpeedRatings']
+      }
+    end
+  end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
