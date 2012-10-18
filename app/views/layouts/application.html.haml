@@ -19,4 +19,12 @@
               %li 
                 %a{href: '#'} Imprint
     .container
-      = yield
+      .row#content
+        .span12
+          = yield
+      .row
+        .span12
+          %footer
+            %p 
+              Powered by 
+              %a{href: 'https://github.com/kalleth/pholio-rails'} Pholio-Rails
