@@ -1,3 +1,7 @@
-- @photos.each do |photo|
-  .photo
-    %img{src: photo.image.thumb}
+.photo-thumbs
+  - @photos.each do |photo|
+    .photo
+      = link_to photo_path(photo) do
+        %img{src: photo.image.thumb}
+        .caption
+          %p= photo.title

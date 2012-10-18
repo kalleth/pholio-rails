@@ -3,6 +3,8 @@ PholioRails::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  resources :photos
+
   root :to => 'photos#index'
 
   # The priority is based upon order of creation:
