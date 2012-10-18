@@ -5,7 +5,7 @@ Pholio - Photography Portfolio site in Rails
 
 License
 =============
-MIT
+MIT - see LICENSE if you really want.
 
 Note
 =============

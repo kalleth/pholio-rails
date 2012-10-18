@@ -1,6 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'bourbon'
+gem 'haml'
+gem 'pry'
+gem 'rails_config'
+gem 'activeadmin'
+gem 'mysql'
+gem 'twitter-bootstrap-rails'
+gem 'mini_magick'
+gem 'carrierwave'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
