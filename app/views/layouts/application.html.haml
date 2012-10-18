@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Pholio Rails
+    %title #{Settings.site.title} - #{Settings.site.tagline}
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -9,7 +9,7 @@
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container
-          %a.brand{href: '/'} Pholio Rails
+          %a.brand{href: '/'}= Settings.site.tagline
           .nav-collapse.collapse
             %ul.nav
               %li.active Home
