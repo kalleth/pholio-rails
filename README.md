@@ -27,6 +27,7 @@ Step 2: Application setup
   * Aaaand, wait.
 * Setup database
   * Create config/database.yml file containing something similar to the following:
+
 ```yaml
 defaults: &defaults
   adapter: mysql
@@ -42,6 +43,7 @@ test:
 production:
   <<: *defaults
 ```
+
 * Create tables
   * $ bundle exec rake db:create db:migrate
 License
