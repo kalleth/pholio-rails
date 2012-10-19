@@ -27,22 +27,23 @@ Step 2: Application setup
   * Aaaand, wait.
 * Setup database
   * Create config/database.yml file containing something similar to the following:
-  ```defaults: &defaults
-  adapter: mysql
-  database: pholio_rails
-  username: root
-  password: b00king
-  host: localhost
 
-development:
-  <<: *defaults
-test:
-  <<: *defaults
-production:
-  <<: *defaults```
+    defaults: &defaults
+      adapter: mysql
+      database: pholio_rails
+      username: YOUR-USERNAME
+      password: YOUR-PASSWORD
+      host: localhost
 
+    development:
+      <<: *defaults
+    test:
+      <<: *defaults
+    production:
+      <<: *defaults
 
-
+* Create tables
+  * $ bundle exec rake db:create db:migrate
 License
 =============
 MIT - see LICENSE if you really want.
