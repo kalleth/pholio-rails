@@ -27,4 +27,11 @@
           = link_to photo_path(@photo.next), class: 'right' do
             #{@photo.next.title}
             &rarr;
-
+    .row
+      .span12
+        #disqus_thread
+        %noscript
+          Please enable JavaScript to view the #{link_to 'comments powered by Disqus.', 'http://disqus.com/?ref_noscript'}
+          %a.dsq-brlink{href: 'http://disqus.com'}
+            comments powered by
+            %span.logo-disqus Disqus
