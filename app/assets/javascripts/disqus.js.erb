@@ -2,9 +2,12 @@
 var disqus_developer = "<%= Rails.env != 'production' ? '1' : '0' %>";
 var disqus_shortname = "<%= Settings.disqus.shortname %>"; // required: replace example with your forum shortname
 /* * * DON'T EDIT BELOW THIS LINE * * */
-(function() {
-  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-})();
-
+$(document).ready(function() {
+  $('#disqus_thread').each(function() {
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  });
+});

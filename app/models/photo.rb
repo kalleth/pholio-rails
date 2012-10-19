@@ -3,7 +3,9 @@ class Photo < ActiveRecord::Base
   attr_accessible :title, :description, :extra, :image
   mount_uploader :image, PhotoUploader
   serialize :meta
-  before_save :set_exif
+  before_save :set_exif, :set_slug
+  extend FriendlyId
+  friendly_id :title, :use => :slugged, :slug_column => :slugged_title
 
   def previous  
     self.class.first(:conditions => ['id < ?', self.id], :limit => 1, :order => "id DESC")

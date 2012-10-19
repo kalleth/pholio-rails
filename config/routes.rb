@@ -6,6 +6,8 @@ PholioRails::Application.routes.draw do
   resources :photos
 
   root :to => 'photos#index'
+  
+  match '/:page' => 'pages#page'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

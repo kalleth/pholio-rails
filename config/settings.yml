@@ -3,3 +3,8 @@ site:
   tagline: A photographic portfolio site in Ruby on Rails
 disqus:
   shortname: localdev-kalleth
+static_pages:
+  - title: Contact
+    slug: contact
+  - title: Imprint
+    slug: imprint
