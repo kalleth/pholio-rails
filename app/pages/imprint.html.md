@@ -8,5 +8,5 @@ About this site
 This is my personal photography portfolio. For my writings on software
 development, see my [ruby/rails blog](http://www.trdev.co.uk).
 
-This site is written in Ruby on Rails, the source code to which is freely
-available [on github](https://github.com/kalleth/pholio-rails).
+This site is written in Ruby on Rails, and its source code is freely available
+[on github](https://github.com/kalleth/pholio-rails).
