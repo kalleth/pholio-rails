@@ -39,6 +39,7 @@ class PhotoUploader < CarrierWave::Uploader::Base
   end
 
   def parse_sum(val)
+    return if val.nil? || val.empty?
     parts = val.split(/\//)
     (parts[0].to_f / parts[1].to_f).to_s
   end
