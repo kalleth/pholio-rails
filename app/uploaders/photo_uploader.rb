@@ -31,8 +31,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
         :make => img['EXIF:Make'],
         :model => img['EXIF:Model'],
         :shutter_speed => img['EXIF:ExposureTime'],
-        :aperture => img['EXIF:FNumber'],
-        :focal_length => img['EXIF:FocalLength'],
+        :aperture => eval(img['EXIF:FNumber'].gsub('/','.to_f/')).to_s,
+        :focal_length => eval(img['EXIF:FocalLength']).to_s,
         :iso => img['EXIF:ISOSpeedRatings']
       }
     end

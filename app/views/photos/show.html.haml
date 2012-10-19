@@ -8,7 +8,7 @@
           %h2= @photo.title
           %p= @photo.description
           %p.extra= @photo.extra
-      - if @photo.meta
+      - if @photo.meta && !@photo.meta.empty?
         .row
           .span4.exif
             %h2 Image Data

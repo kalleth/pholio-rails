@@ -6,6 +6,6 @@ class Photo < ActiveRecord::Base
   before_save :set_exif
 
   def set_exif
-    self.meta = image.get_exif
+    self.meta = image.get_exif.delete_if { |k,v| v.nil? || v.empty? }
   end
 end
