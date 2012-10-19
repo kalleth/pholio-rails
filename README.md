@@ -3,6 +3,46 @@ pholio-rails
 
 Pholio - Photography Portfolio site in Rails
 
+Installation
+============
+I highly recommend you do not install this yet. It's not finished.
+
+With that said, here's an overview of the installation process:
+
+For those familiar with Rails applications
+------------
+Depends on imagemagick. Then skip to step 2.
+
+Step 1: Dependency installation
+------------
+* $ sudo apt-get install ruby1.9.3 imagemagick mysql-server {nginx|apache} (choose one)
+* $ gem install passenger
+  * follow instructions
+* $ gem install bundler
+
+Step 2: Application setup
+------------
+* $ cd pholio-rails/
+* $ bundle install
+  * Aaaand, wait.
+* Setup database
+  * Create config/database.yml file containing something similar to the following:
+  ```defaults: &defaults
+  adapter: mysql
+  database: pholio_rails
+  username: root
+  password: b00king
+  host: localhost
+
+development:
+  <<: *defaults
+test:
+  <<: *defaults
+production:
+  <<: *defaults```
+
+
+
 License
 =============
 MIT - see LICENSE if you really want.
