@@ -42,6 +42,7 @@ test:
   <<: *defaults
 production:
   <<: *defaults
+```
 
 * Create tables
   * $ bundle exec rake db:create db:migrate
