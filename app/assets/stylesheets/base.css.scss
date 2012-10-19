@@ -31,6 +31,13 @@ body {
           }
         }
       }
+      .prevnext {
+        padding: 20px 20px;
+        a {
+          &.left { float: left; }
+          &.right { float: right; }
+        }
+      }
     }
     .photo-thumbs {
       a { text-decoration: none; }

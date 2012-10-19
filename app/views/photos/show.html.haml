@@ -17,4 +17,14 @@
                 %tr
                   %td= translate_exif_code(code)
                   %td= value
+    .row
+      .span12.prevnext
+        - if @photo.previous
+          = link_to photo_path(@photo.previous), class: 'left' do
+            &larr;
+            #{@photo.previous.title}
+        - if @photo.next
+          = link_to photo_path(@photo.next), class: 'right' do
+            #{@photo.next.title}
+            &rarr;
 
