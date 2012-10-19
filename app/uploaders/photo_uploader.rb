@@ -30,11 +30,26 @@ class PhotoUploader < CarrierWave::Uploader::Base
         :date_taken => img['EXIF:DateTimeOriginal'],
         :make => img['EXIF:Make'],
         :model => img['EXIF:Model'],
-        :shutter_speed => img['EXIF:ExposureTime'],
-        :aperture => eval(img['EXIF:FNumber'].gsub('/','.to_f/')).to_s,
-        :focal_length => eval(img['EXIF:FocalLength']).to_s,
+        :shutter_speed => parse_ss(img['EXIF:ExposureTime']),
+        :aperture => parse_sum(img['EXIF:FNumber']),
+        :focal_length => parse_sum(img['EXIF:FocalLength']),
         :iso => img['EXIF:ISOSpeedRatings']
       }
+    end
+  end
+
+  def parse_sum(val)
+    parts = val.split(/\//)
+    (parts[0].to_f / parts[1].to_f).to_s
+  end
+
+  def parse_ss(val)
+    if val.match(/\//)
+      parts = val.split(/\//)
+      denom = (parts[1].to_f / parts[0].to_f).to_i
+      "1/#{denom}"
+    else
+      val
     end
   end
 
