@@ -1,7 +1,8 @@
 .photo-detail
   .row
     .span8.photo
-      %img{src: @photo.image}
+      = link_to @photo.image.url, class: 'fancy' do
+        %img{src: @photo.image.display}
     .span4
       .row
         .span4

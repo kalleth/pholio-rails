@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require base
 //= require disqus
+//= require jquery.fancybox

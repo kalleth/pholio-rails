@@ -1,5 +1,6 @@
 $(document).ready ->
   $('#content .photo-thumbs .photo').hover fadeImageIn, fadeImageOut
+  $('#content .photo-detail .photo .fancy').fancybox({padding: 0})
 
 fadeImageIn = ->
   $(this).find('img').fadeTo 'fast', 0.3

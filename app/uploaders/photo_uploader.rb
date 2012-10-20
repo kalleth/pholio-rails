@@ -24,6 +24,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [280,210]
   end
 
+  version :display do
+    process resize_to_fit: [600, 600] 
+  end
+
   def get_exif
     manipulate! do |img|
       return {
