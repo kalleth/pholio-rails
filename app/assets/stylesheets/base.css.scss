@@ -1,6 +1,11 @@
 @import 'bourbon';
 body {
   padding-top: 60px;
+  footer {
+    font-size: 10px;
+    opacity: 0.5;
+    text-align: center;
+  }
   #content {
     padding-bottom: 20px;
     padding-top: 2px;
